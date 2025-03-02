@@ -253,6 +253,227 @@
 
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
             <div class="p-6">
+                <!-- Add this section before the "Ready to Try It?" section in teach.html -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+    <div class="p-6">
+        <h2 class="text-2xl font-bold mb-4 text-blue-700">Prompt Evolution: From Basic to Advanced</h2>
+        <p class="mb-6">
+            Watch how a teacher's prompt evolves from basic to advanced as each element of the T.E.A.C.H. framework is applied. 
+            This demonstrates the dramatic improvement in AI responses when using a structured approach to prompting.
+        </p>
+
+        <div class="relative bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
+            <div class="flex justify-between mb-4">
+                <h3 class="text-lg font-bold">Prompt Evolution</h3>
+                <div>
+                    <button id="playAnimation" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Play Animation</button>
+                    <button id="resetAnimation" class="bg-gray-200 text-gray-700 px-3 py-1 rounded hover:bg-gray-300 ml-2">Reset</button>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="font-medium mb-2">Scenario: A 4th grade teacher wants to create a science activity about the water cycle</h4>
+            </div>
+
+            <div id="promptContainer" class="relative min-h-[400px] bg-white border border-gray-200 rounded-lg p-4 mb-6">
+                <div id="level1" class="absolute top-0 left-0 right-0 p-4 transition-opacity duration-500">
+                    <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-1">Level 1: Basic Prompt (T only)</h4>
+                    <div class="bg-blue-50 p-3 rounded mb-2">
+                        <p class="font-medium"><span class="text-blue-600">T:</span> Create a water cycle activity.</p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-700 italic mb-1">Likely AI Response:</p>
+                        <p class="text-sm text-gray-700">A generic water cycle activity that might not match the teacher's grade level, available materials, or curriculum alignment needs. The teacher would need to heavily modify the response.</p>
+                    </div>
+                </div>
+
+                <div id="level2" class="absolute top-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-500">
+                    <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-1">Level 2: Better Prompt (T + C)</h4>
+                    <div class="bg-blue-50 p-3 rounded mb-2">
+                        <p class="font-medium">
+                            <span class="text-blue-600">T:</span> Create a water cycle activity.<br>
+                            <span class="text-purple-600">C:</span> This is for 4th graders who have already learned the basic stages of the water cycle. We have limited materials and only 30 minutes for the activity.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-700 italic mb-1">Likely AI Response:</p>
+                        <p class="text-sm text-gray-700">A more appropriate activity for 4th graders that considers time and material constraints. However, it might not include clear instructions or align with the teacher's teaching style.</p>
+                    </div>
+                </div>
+
+                <div id="level3" class="absolute top-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-500">
+                    <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-1">Level 3: Strong Prompt (T + C + A)</h4>
+                    <div class="bg-blue-50 p-3 rounded mb-2">
+                        <p class="font-medium">
+                            <span class="text-blue-600">T:</span> Create a water cycle activity.<br>
+                            <span class="text-purple-600">C:</span> This is for 4th graders who have already learned the basic stages of the water cycle. We have limited materials and only 30 minutes for the activity.<br>
+                            <span class="text-green-600">A:</span> My students are hands-on learners who enjoy collaborative group work.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-700 italic mb-1">Likely AI Response:</p>
+                        <p class="text-sm text-gray-700">A collaborative hands-on activity appropriate for 4th graders with consideration for time and material constraints. The teaching approach will match the students' learning preferences, but the exact format might not be what the teacher had in mind.</p>
+                    </div>
+                </div>
+
+                <div id="level4" class="absolute top-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-500">
+                    <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-1">Level 4: Excellent Prompt (T + C + A + H)</h4>
+                    <div class="bg-blue-50 p-3 rounded mb-2">
+                        <p class="font-medium">
+                            <span class="text-blue-600">T:</span> Create a water cycle activity.<br>
+                            <span class="text-purple-600">C:</span> This is for 4th graders who have already learned the basic stages of the water cycle. We have limited materials and only 30 minutes for the activity.<br>
+                            <span class="text-green-600">A:</span> My students are hands-on learners who enjoy collaborative group work.<br>
+                            <span class="text-red-600">H:</span> Structure this as a bullet-pointed list with sections for objective, materials, step-by-step instructions, and assessment questions.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-700 italic mb-1">Likely AI Response:</p>
+                        <p class="text-sm text-gray-700">A well-structured, grade-appropriate collaborative activity with clear organization. The teacher can easily implement this activity with minimal modifications needed. However, it might still require creativity from the teacher to make it unique.</p>
+                    </div>
+                </div>
+
+                <div id="level5" class="absolute top-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-500">
+                    <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-1">Level 5: Expert Prompt (All T.E.A.C.H. Elements)</h4>
+                    <div class="bg-blue-50 p-3 rounded mb-2">
+                        <p class="font-medium">
+                            <span class="text-blue-600">T:</span> Create a water cycle activity.<br>
+                            <span class="text-yellow-600">E:</span> I did a similar activity last year where students created "mini terrariums" in plastic cups with lids to observe condensation and evaporation, but I want something new this year.<br>
+                            <span class="text-green-600">A:</span> My students are hands-on learners who enjoy collaborative group work.<br>
+                            <span class="text-purple-600">C:</span> This is for 4th graders who have already learned the basic stages of the water cycle. We have limited materials and only 30 minutes for the activity. We're focusing on how the water cycle impacts local ecosystems.<br>
+                            <span class="text-red-600">H:</span> Structure this as a bullet-pointed list with sections for objective, materials, step-by-step instructions, and assessment questions.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-700 italic mb-1">Likely AI Response:</p>
+                        <p class="text-sm text-gray-700">A tailored, innovative activity that builds on prior experience, meets the teacher's specific pedagogical goals, addresses curriculum connections to ecosystems, and is presented in a ready-to-use format. The prompt's completeness allows the AI to generate a highly effective, creative, and practical response that aligns precisely with the teacher's needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <h4 class="font-medium text-yellow-800 mb-2">What This Demonstrates:</h4>
+                <ul class="list-disc pl-5 text-yellow-800">
+                    <li class="mb-1">Even a basic prompt (Task only) can get a response, but it's likely to be generic and require significant adaptation.</li>
+                    <li class="mb-1">Adding <strong>Context</strong> significantly improves relevance to your specific situation.</li>
+                    <li class="mb-1">Including <strong>Audience</strong> helps tailor the response to your students' needs and preferences.</li>
+                    <li class="mb-1">Specifying <strong>How to Format</strong> makes the response immediately more usable.</li>
+                    <li class="mb-1">Providing an <strong>Example</strong> dramatically improves the AI's understanding of your expectations and helps it generate more innovative alternatives.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">When to Use All Elements</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>For complex requests where precision matters</li>
+                    <li>When creating curriculum materials you'll use with students</li>
+                    <li>For assessment design or rubric creation</li>
+                    <li>When you need a high-quality resource with minimal editing</li>
+                    <li>For specialized or technical content</li>
+                </ul>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">When a Simpler Prompt Is Fine</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>For quick informational questions (just Task + Context)</li>
+                    <li>When brainstorming initial ideas (Task + minimal Context)</li>
+                    <li>For personal use materials that you'll heavily modify</li>
+                    <li>When exploring possibilities before refining</li>
+                    <li>For straightforward factual responses</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-4 text-blue-700">A Teacher's Internal Dialogue</h3>
+            <p class="italic mb-4 text-gray-600">Here's what a teacher might think while crafting a prompt using the T.E.A.C.H. framework:</p>
+            
+            <div class="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+                <p class="text-gray-700"><strong>Task:</strong> <em>"I need to create a fraction unit assessment. So I'll start with 'Create a math assessment on fractions...' Wait, that's too vague. Let me be more specific: 'Design a 10-question assessment to evaluate understanding of equivalent fractions and fraction operations.'"</em></p>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+                <p class="text-gray-700"><strong>Example:</strong> <em>"What kind of problems do I want? I should show the AI an example so it understands the level... 'Include questions similar to: Find the equivalent fraction for 3/4 with a denominator of 12.'"</em></p>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+                <p class="text-gray-700"><strong>Audience:</strong> <em>"These are 5th graders, so not too easy but not too challenging either. 'This is for 5th grade students who have been working with fractions for about three weeks. Several students still confuse addition and multiplication of fractions.'"</em></p>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+                <p class="text-gray-700"><strong>Context:</strong> <em>"What else would help the AI create the right assessment? 'This assessment should align with Common Core standard 5.NF.A.1 and will be used as a summative assessment before moving to decimals. I want to identify students who need additional support before moving on.'"</em></p>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg p-4">
+                <p class="text-gray-700"><strong>How to Format:</strong> <em>"How do I want this organized? 'Format this as a printable assessment with a mix of multiple choice (4 questions), short answer (3 questions), and word problems (3 questions). Include an answer key and scoring guide showing which questions align with which skills.'"</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add this script to the bottom of teach.html before the closing </body> tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const levels = [
+            document.getElementById('level1'),
+            document.getElementById('level2'),
+            document.getElementById('level3'),
+            document.getElementById('level4'),
+            document.getElementById('level5')
+        ];
+        
+        let currentLevel = 0;
+        let animationInterval;
+        
+        function showLevel(level) {
+            // Hide all levels
+            levels.forEach(lvl => {
+                lvl.style.opacity = '0';
+                lvl.style.zIndex = '0';
+            });
+            
+            // Show the current level
+            if (levels[level]) {
+                levels[level].style.opacity = '1';
+                levels[level].style.zIndex = '10';
+            }
+        }
+        
+        function playAnimation() {
+            // Reset first
+            currentLevel = 0;
+            showLevel(currentLevel);
+            
+            // Clear any existing intervals
+            clearInterval(animationInterval);
+            
+            // Start the animation
+            animationInterval = setInterval(function() {
+                currentLevel++;
+                if (currentLevel >= levels.length) {
+                    clearInterval(animationInterval);
+                    return;
+                }
+                showLevel(currentLevel);
+            }, 4000); // Change level every 4 seconds
+        }
+        
+        function resetAnimation() {
+            clearInterval(animationInterval);
+            currentLevel = 0;
+            showLevel(currentLevel);
+        }
+        
+        // Initialize to show the first level
+        showLevel(0);
+        
+        // Add event listeners to the buttons
+        document.getElementById('playAnimation').addEventListener('click', playAnimation);
+        document.getElementById('resetAnimation').addEventListener('click', resetAnimation);
+    });
+</script>
                 <h2 class="text-2xl font-bold mb-4 text-blue-700">Ready to Try It?</h2>
                 <p class="mb-6">
                     Now that you understand the T.E.A.C.H. framework, it's time to put it into practice! Visit our 
