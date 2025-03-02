@@ -1,1 +1,1 @@
-# teacherprompts
+# teacher-prompts
