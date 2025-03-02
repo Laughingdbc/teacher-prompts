@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.E.A.C.H. - Effective AI Prompting Framework</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .importance-pill {
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .importance-high {
+            background-color: #FEE2E2;
+            color: #DC2626;
+        }
+        .importance-medium {
+            background-color: #FEF3C7;
+            color: #D97706;
+        }
+        .importance-standard {
+            background-color: #DBEAFE;
+            color: #2563EB;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <h1 class="text-2xl font-bold">AI for GP</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:underline">Prompt Collection</a></li>
+                    <li><a href="teach.html" class="font-bold border-b-2 border-white">T.E.A.C.H. Framework</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow p-4 max-w-6xl mx-auto w-full">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+            <div class="p-6">
+                <h2 class="text-3xl font-bold mb-6 text-blue-700">The T.E.A.C.H. Framework</h2>
+                <p class="mb-6 text-lg">
+                    An easy-to-remember acronym for teachers to master effective AI prompting. Each letter represents a key step in crafting a strong prompt.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                    <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-blue-800">T - Task</h3>
+                            <span class="importance-pill importance-high">Essential</span>
+                        </div>
+                        <p class="mb-3">Start with an <strong>action verb</strong> that clearly defines what you want the AI to do.</p>
+                        <div class="bg-white p-4 rounded border border-gray-200 mb-3">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-1">Examples:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Generate a list of...</li>
+                                <li>Write a lesson plan about...</li>
+                                <li>Create an assessment for...</li>
+                                <li>Explain the concept of...</li>
+                                <li>Analyze this student writing sample...</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <p class="text-sm text-gray-600"><strong>Why it matters:</strong> The task sets the primary direction for the AI. Without a clear task, the AI might generate unfocused or inappropriate content.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-yellow-800">E - Example</h3>
+                            <span class="importance-pill importance-medium">Important</span>
+                        </div>
+                        <p class="mb-3">Provide <strong>models, frameworks, or samples</strong> to guide the AI toward your desired output style and quality.</p>
+                        <div class="bg-white p-4 rounded border border-gray-200 mb-3">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-1">Examples:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Format it like this: [example format]</li>
+                                <li>Use this writing style: [example paragraph]</li>
+                                <li>Follow this structure: [outline or template]</li>
+                                <li>Include sections similar to: [example sections]</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <p class="text-sm text-gray-600"><strong>Why it matters:</strong> Examples dramatically improve the AI's understanding of your expectations and help it match your vision more precisely.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-6 rounded-lg border border-green-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-green-800">A - Audience</h3>
+                            <span class="importance-pill importance-standard">Helpful</span>
+                        </div>
+                        <p class="mb-3">Define the <strong>persona or role</strong> the AI should take on and who the content is for.</p>
+                        <div class="bg-white p-4 rounded border border-gray-200 mb-3">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-1">Examples:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Write as if you are a 3rd grade teacher explaining...</li>
+                                <li>Create content appropriate for middle school students...</li>
+                                <li>Design this for English language learners who are...</li>
+                                <li>Write this for parents of kindergarteners...</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <p class="text-sm text-gray-600"><strong>Why it matters:</strong> Defining the audience helps the AI adjust its language, complexity, and tone to be appropriate for the intended readers.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-50 p-6 rounded-lg border border-purple-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-purple-800">C - Context</h3>
+                            <span class="importance-pill importance-medium">Important</span>
+                        </div>
+                        <p class="mb-3">Give <strong>background details</strong> to refine the response and make it more relevant.</p>
+                        <div class="bg-white p-4 rounded border border-gray-200 mb-3">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-1">Examples:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>We're studying the water cycle in our unit about...</li>
+                                <li>My students struggle with multiplication facts, especially...</li>
+                                <li>Our school follows the XYZ reading curriculum...</li>
+                                <li>This is for a classroom with limited technology access...</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <p class="text-sm text-gray-600"><strong>Why it matters:</strong> Context helps the AI tailor its response to your specific situation, making the output more useful and relevant to your needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-lg border border-red-100 md:col-span-2">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-red-800">H - How to Format</h3>
+                            <span class="importance-pill importance-standard">Helpful</span>
+                        </div>
+                        <p class="mb-3">Specify the <strong>structure and organization</strong> you prefer for the response.</p>
+                        <div class="bg-white p-4 rounded border border-gray-200 mb-3">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-1">Examples:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <ul class="list-disc pl-5 text-gray-700">
+                                    <li>Format as a table with these columns: [column names]</li>
+                                    <li>Present this as bullet points under clear headings</li>
+                                    <li>Organize this in chronological order</li>
+                                    <li>Create a step-by-step guide with numbered steps</li>
+                                </ul>
+                                <ul class="list-disc pl-5 text-gray-700">
+                                    <li>Include a materials list at the beginning</li>
+                                    <li>Structure this as an "I do, we do, you do" lesson</li>
+                                    <li>Format this as a two-column table with pros and cons</li>
+                                    <li>Present this as a rubric with 3 performance levels</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <p class="text-sm text-gray-600"><strong>Why it matters:</strong> Formatting specifications ensure the AI's response is organized in a way that's easy to use and suits your intended purpose.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-700">Putting It All Together</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h4 class="font-bold mb-2">Example Complete Prompt:</h4>
+                        <div class="bg-white p-4 rounded border border-gray-300 mb-4">
+                            <p class="italic">
+                                <span class="text-blue-600 font-semibold">T (Task):</span> Generate 5 math word problems<br>
+                                <span class="text-yellow-600 font-semibold">E (Example):</span> Like this example: "Sarah has 24 cookies and wants to share them equally among 6 friends. How many cookies will each friend receive?"<br>
+                                <span class="text-green-600 font-semibold">A (Audience):</span> For 3rd grade students who are just learning division<br>
+                                <span class="text-purple-600 font-semibold">C (Context):</span> We've been working on division with remainders, and many students are struggling with interpreting what to do with the remainder in real-world contexts<br>
+                                <span class="text-red-600 font-semibold">H (How to Format):</span> Present each problem followed by a "Teacher Note" explaining how to guide students who get stuck
+                            </p>
+                        </div>
+                        <h4 class="font-bold mb-2">What Makes This Effective:</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Clear task</strong> that specifies exactly what's needed (5 math word problems)</li>
+                            <li><strong>Specific example</strong> that shows the level of complexity expected</li>
+                            <li><strong>Well-defined audience</strong> (3rd graders learning division)</li>
+                            <li><strong>Helpful context</strong> about current learning challenges</li>
+                            <li><strong>Practical formatting request</strong> that supports teaching needs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-100 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-700">Why T.E.A.C.H.?</h3>
+                    <ul class="list-disc pl-5 space-y-3">
+                        <li class="text-lg">It's <strong>memorable</strong> for educators who are new to working with AI.</li>
+                        <li class="text-lg">It <strong>reinforces teaching best practices</strong>—clear instructions, modeling, and structure.</li>
+                        <li class="text-lg">It <strong>makes AI a more effective tool</strong> in the classroom by ensuring precise, engaging responses.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">Component Importance Ranking</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Component</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Importance</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Why</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium">Task (T)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="importance-pill importance-high">Essential</span>
+                                    </td>
+                                    <td class="px-6 py-4">Without a clear task, the AI lacks direction and may produce irrelevant content.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium">Context (C)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="importance-pill importance-medium">Important</span>
+                                    </td>
+                                    <td class="px-6 py-4">Context significantly improves relevance and helps the AI meet your specific needs.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium">Example (E)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="importance-pill importance-medium">Important</span>
+                                    </td>
+                                    <td class="px-6 py-4">Examples dramatically improve output quality by showing exactly what you want.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium">Audience (A)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="importance-pill importance-standard">Helpful</span>
+                                    </td>
+                                    <td class="px-6 py-4">Helps adjust language complexity and tone but can be inferred from context in some cases.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium">How to Format (H)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="importance-pill importance-standard">Helpful</span>
+                                    </td>
+                                    <td class="px-6 py-4">Formatting enhances usability but many responses can be effective in multiple formats.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-700">Ready to Try It?</h2>
+                <p class="mb-6">
+                    Now that you understand the T.E.A.C.H. framework, it's time to put it into practice! Visit our 
+                    <a href="index.html" class="text-blue-600 hover:underline font-medium">AI Prompt Collection</a> 
+                    for examples of effective prompts organized by grade level, or try crafting your own using the framework.
+                </p>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <p class="text-blue-800">
+                        Remember, effective prompting is a skill that improves with practice. Don't be afraid to experiment and refine your prompts based on the results you get!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 border-t p-4 text-center text-gray-500 text-sm">
+        AI for GP - Helping teachers leverage AI for better teaching and learning
+    </footer>
+</body>
+</html>
