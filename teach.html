@@ -413,7 +413,6 @@
     </div>
 </div>
 
-<!-- Add this script to the bottom of teach.html before the closing </body> tag -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const levels = [
@@ -492,5 +491,61 @@
     <footer class="bg-gray-100 border-t p-4 text-center text-gray-500 text-sm">
         AI for GP - Helping teachers leverage AI for better teaching and learning
     </footer>
+    // Add this script to the bottom of teach.html before the closing </body> tag
+document.addEventListener('DOMContentLoaded', function() {
+    const levels = [
+        document.getElementById('level1'),
+        document.getElementById('level2'),
+        document.getElementById('level3'),
+        document.getElementById('level4'),
+        document.getElementById('level5')
+    ];
+    
+    let currentLevel = 0;
+    
+    function showLevel(level) {
+        // Hide all levels
+        levels.forEach(lvl => {
+            lvl.classList.add('hidden');
+        });
+        
+        // Show the current level
+        if (levels[level]) {
+            levels[level].classList.remove('hidden');
+            
+            // Update the level indicator
+            const levelNames = [
+                "Level 1/5: Basic Prompt (T only)",
+                "Level 2/5: Better Prompt (T + C)",
+                "Level 3/5: Strong Prompt (T + C + A)",
+                "Level 4/5: Excellent Prompt (T + C + A + H)",
+                "Level 5/5: Expert Prompt (All T.E.A.C.H. Elements)"
+            ];
+            
+            document.getElementById('level-indicator').textContent = levelNames[level];
+        }
+    }
+    
+    function nextLevel() {
+        if (currentLevel < levels.length - 1) {
+            currentLevel++;
+            showLevel(currentLevel);
+        }
+    }
+    
+    function prevLevel() {
+        if (currentLevel > 0) {
+            currentLevel--;
+            showLevel(currentLevel);
+        }
+    }
+    
+    // Initialize to show the first level
+    showLevel(0);
+    
+    // Add event listeners to the buttons
+    document.getElementById('nextLevel').addEventListener('click', nextLevel);
+    document.getElementById('prevLevel').addEventListener('click', prevLevel);
+});
 </body>
 </html>
